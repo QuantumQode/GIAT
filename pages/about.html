@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GIAT Ltd - Global Industrial Automation Technologies</title>
+    <meta name="description" content="Learn about GIAT Ltd's journey, mission, and commitment to delivering precision industrial automation solutions since 2005.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'charcoal': '#333333',
+                        'steel': '#555555',
+                        'electric-blue': '#007ACC',
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: rgba(51, 51, 51, 0.7);
+        }
+        
+        .industrial-pattern {
+            background-image: 
+                linear-gradient(rgba(0, 122, 204, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 122, 204, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #007ACC, #005a99);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: #007ACC;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #007ACC;
+        }
+    </style>
+</head>
+<body class="bg-white text-steel">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-2xl font-bold text-charcoal">
+                    <span class="text-electric-blue">GIAT</span> Ltd
+                </a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <nav>
+                    <ul class="flex space-x-8">
+                        <li><a href="../index.html" class="text-steel hover:text-electric-blue transition">Home</a></li>
+                        <li><a href="products.html" class="text-steel hover:text-electric-blue transition">Products</a></li>
+                        <li><a href="about.html" class="text-charcoal font-medium hover:text-electric-blue transition">About</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html" class="bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition">
+                    Contact Us
+                </a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-charcoal">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="px-4 py-3 space-y-4">
+                <a href="../index.html" class="block text-steel hover:text-electric-blue transition">Home</a>
+                <a href="products.html" class="block text-steel hover:text-electric-blue transition">Products</a>
+                <a href="about.html" class="block text-charcoal font-medium hover:text-electric-blue transition">About</a>
+                <a href="contact.html" class="block text-steel hover:text-electric-blue transition">Contact Us</a>
+                <a href="contact.html" class="block bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition text-center">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-gradient-to-r from-charcoal to-steel">
+            <div class="absolute inset-0 industrial-pattern opacity-10"></div>
+            <div class="relative z-10 container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 fade-in">
+                    About GIAT Ltd
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 fade-in max-w-3xl mx-auto">
+                    Pioneering precision industrial automation solutions since 2005. Discover our journey, mission, and the team behind our success.
+                </p>
+            </div>
+        </section>
+
+        <!-- Company Story Section -->
+        <section class="py-16 industrial-pattern">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-charcoal mb-6">Our Story</h2>
+                        <p class="text-steel mb-6 text-lg">
+                            Founded in 2005, GIAT Ltd emerged from a vision to revolutionize industrial automation through precision measurement technologies. What started as a small team of passionate engineers has grown into a global leader in level measurement and automation solutions.
+                        </p>
+                        <p class="text-steel mb-6">
+                            Our journey began in London with a simple mission: to provide industries with the most accurate, reliable, and innovative measurement solutions. Today, we serve clients across six continents, delivering cutting-edge technology that drives efficiency and safety in the world's most demanding industrial environments.
+                        </p>
+                        <p class="text-steel">
+                            From oil refineries in the Middle East to pharmaceutical plants in Europe, from water treatment facilities in Asia to power generation stations in the Americas, GIAT's solutions are trusted by industry leaders worldwide.
+                        </p>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1581093450021-33a64e8d2103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="GIAT headquarters and team" 
+                             class="rounded-lg shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Values Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-charcoal mb-4">Our Mission & Values</h2>
+                    <p class="text-steel text-lg max-w-3xl mx-auto">
+                        We are driven by a commitment to precision, innovation, and reliability in everything we do.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Mission -->
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover transition duration-300">
+                        <div class="text-electric-blue mb-4">
+                            <i class="fas fa-bullseye text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal mb-4">Our Mission</h3>
+                        <p class="text-steel">
+                            To provide the world's most precise and reliable industrial automation solutions, enabling our clients to achieve optimal performance, safety, and efficiency in their operations.
+                        </p>
+                    </div>
+                    
+                    <!-- Vision -->
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover transition duration-300">
+                        <div class="text-electric-blue mb-4">
+                            <i class="fas fa-eye text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal mb-4">Our Vision</h3>
+                        <p class="text-steel">
+                            To be the global leader in industrial automation technology, setting new standards for precision, innovation, and customer satisfaction in the industry.
+                        </p>
+                    </div>
+                    
+                    <!-- Values -->
+                    <div class="bg-white p-8 rounded-lg shadow-md card-hover transition duration-300">
+                        <div class="text-electric-blue mb-4">
+                            <i class="fas fa-heart text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal mb-4">Our Values</h3>
+                        <ul class="text-steel space-y-2">
+                            <li>• Precision & Accuracy</li>
+                            <li>• Innovation & Excellence</li>
+                            <li>• Reliability & Trust</li>
+                            <li>• Customer Success</li>
+                            <li>• Safety First</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="py-16 industrial-pattern">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-charcoal text-center mb-12">Our Journey</h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-8">
+                        <!-- 2005 -->
+                        <div class="timeline-item pl-8">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-charcoal">2005 - Company Founded</h3>
+                                    <span class="text-electric-blue font-semibold">2005</span>
+                                </div>
+                                <p class="text-steel">
+                                    GIAT Ltd was established in London with a team of five engineers, focusing on precision level measurement solutions for the oil and gas industry.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 2010 -->
+                        <div class="timeline-item pl-8">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-charcoal">2010 - International Expansion</h3>
+                                    <span class="text-electric-blue font-semibold">2010</span>
+                                </div>
+                                <p class="text-steel">
+                                    Expanded operations to the Middle East and Asia, establishing regional offices and partnerships to better serve global clients.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 2015 -->
+                        <div class="timeline-item pl-8">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-charcoal">2015 - Technology Innovation</h3>
+                                    <span class="text-electric-blue font-semibold">2015</span>
+                                </div>
+                                <p class="text-steel">
+                                    Launched revolutionary laser level transmitter technology, achieving ±2mm accuracy and expanding into pharmaceutical and power generation sectors.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 2020 -->
+                        <div class="timeline-item pl-8">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-charcoal">2020 - Digital Transformation</h3>
+                                    <span class="text-electric-blue font-semibold">2020</span>
+                                </div>
+                                <p class="text-steel">
+                                    Implemented IoT-enabled solutions and remote monitoring capabilities, enhancing our automation services and customer support.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 2025 -->
+                        <div class="timeline-item pl-8">
+                            <div class="timeline-dot"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                    <h3 class="text-xl font-bold text-charcoal">2025 - Global Leadership</h3>
+                                    <span class="text-electric-blue font-semibold">2025</span>
+                                </div>
+                                <p class="text-steel">
+                                    Celebrating 20 years of excellence, serving over 500 clients across 45 countries with cutting-edge automation solutions and unmatched precision.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-charcoal text-center mb-12">Our Leadership Team</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md card-hover transition duration-300">
+                        <div class="text-center mb-4">
+                            <div class="w-24 h-24 bg-electric-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal">Dr. Sarah Mitchell</h3>
+                            <p class="text-electric-blue font-medium">Chief Executive Officer</p>
+                        </div>
+                        <p class="text-steel text-center">
+                            With over 20 years in industrial automation, Dr. Mitchell leads GIAT's strategic vision and global expansion initiatives.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md card-hover transition duration-300">
+                        <div class="text-center mb-4">
+                            <div class="w-24 h-24 bg-electric-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal">Michael Chen</h3>
+                            <p class="text-electric-blue font-medium">Chief Technology Officer</p>
+                        </div>
+                        <p class="text-steel text-center">
+                            A pioneer in sensor technology, Michael drives innovation and oversees all technical development at GIAT.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md card-hover transition duration-300">
+                        <div class="text-center mb-4">
+                            <div class="w-24 h-24 bg-electric-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal">Emma Rodriguez</h3>
+                            <p class="text-electric-blue font-medium">Head of Operations</p>
+                        </div>
+                        <p class="text-steel text-center">
+                            Emma ensures operational excellence across all GIAT facilities and manages our global service network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 industrial-pattern">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-electric-blue text-4xl font-bold mb-2">20+</div>
+                        <div class="text-steel font-medium">Years Experience</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-electric-blue text-4xl font-bold mb-2">500+</div>
+                        <div class="text-steel font-medium">Global Clients</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-electric-blue text-4xl font-bold mb-2">45</div>
+                        <div class="text-steel font-medium">Countries Served</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="text-electric-blue text-4xl font-bold mb-2">24/7</div>
+                        <div class="text-steel font-medium">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="quote" class="py-16 bg-electric-blue text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Work With Us?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Join hundreds of satisfied clients who trust GIAT for their industrial automation needs. Let's discuss how we can help your business.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-electric-blue px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">
+                        Get in Touch
+                    </a>
+                    <a href="products.html" class="border border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-electric-blue transition inline-block">
+                        View Our Products
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">About GIAT</h3>
+                    <p class="mb-4">Global Industrial Automation Technologies Ltd delivers precision measurement and automation solutions to industrial clients worldwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-electric-blue hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-electric-blue hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-electric-blue hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#quote" class="hover:text-white transition">Request a Quote</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#laser" class="hover:text-white transition">Laser Level Transmitters</a></li>
+                        <li><a href="products.html#dp" class="hover:text-white transition">DP Transmitters</a></li>
+                        <li><a href="products.html#services" class="hover:text-white transition">Automation Services</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="#" class="hover:text-white transition">Technical Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="mb-2">89 Partington Close</p>
+                        <p class="mb-2">London N19 3DY</p>
+                        <p class="mb-2">United Kingdom</p>
+                        <p class="mb-2"><a href="tel:+442076123456" class="hover:text-white transition">+44 20 7612 3456</a></p>
+                        <p class="mb-2"><a href="mailto:info@giatltd.com" class="hover:text-white transition">info@giatltd.com</a></p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white mb-4 md:mb-0">© GIAT Ltd 2025 – Designed for Precision.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                        <a href="#" class="hover:text-white transition">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add fade-in effect to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0');
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html> 

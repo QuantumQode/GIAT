@@ -1,0 +1,38 @@
+{
+  "name": "giat-website",
+  "version": "1.0.0",
+  "description": "GIAT Ltd - Global Industrial Automation Technologies Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "serve": "npx serve -p 3000",
+    "build": "echo 'Static site - no build process required'",
+    "lint": "echo 'Linting not configured'",
+    "test": "echo 'Testing not configured'"
+  },
+  "keywords": [
+    "industrial",
+    "automation",
+    "level-measurement",
+    "transmitters",
+    "manufacturing",
+    "oil-gas",
+    "petrochemical"
+  ],
+  "author": "GIAT Ltd",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/giat-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/giat-website/issues"
+  },
+  "homepage": "https://giatltd.com",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

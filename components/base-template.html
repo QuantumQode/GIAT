@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}} - GIAT Ltd - Global Industrial Automation Technologies</title>
+    <meta name="description" content="{{PAGE_DESCRIPTION}}">
+    
+    <!-- External Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'charcoal': '#333333',
+                        'steel': '#555555',
+                        'electric-blue': '#007ACC',
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Page-specific styles can be added here -->
+    {{PAGE_STYLES}}
+</head>
+<body class="bg-white text-steel">
+    <!-- Header Component -->
+    {{HEADER_COMPONENT}}
+    
+    <!-- Main Content -->
+    <main>
+        {{MAIN_CONTENT}}
+    </main>
+    
+    <!-- Footer Component -->
+    {{FOOTER_COMPONENT}}
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Page-specific scripts can be added here -->
+    {{PAGE_SCRIPTS}}
+</body>
+</html> 

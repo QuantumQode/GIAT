@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GIAT Ltd - Global Industrial Automation Technologies</title>
+    <meta name="description" content="Explore our range of high-precision level measurement and automation products for industrial applications.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'charcoal': '#333333',
+                        'steel': '#555555',
+                        'electric-blue': '#007ACC',
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'Helvetica Neue', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: rgba(51, 51, 51, 0.7);
+        }
+        
+        .industrial-pattern {
+            background-image: 
+                linear-gradient(rgba(0, 122, 204, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 122, 204, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-steel">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-2xl font-bold text-charcoal">
+                    <span class="text-electric-blue">GIAT</span> Ltd
+                </a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <nav>
+                    <ul class="flex space-x-8">
+                        <li><a href="../index.html" class="text-steel hover:text-electric-blue transition">Home</a></li>
+                        <li><a href="products.html" class="text-charcoal font-medium hover:text-electric-blue transition">Products</a></li>
+                        <li><a href="about.html" class="text-steel hover:text-electric-blue transition">About</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html" class="bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition">
+                    Contact Us
+                </a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-charcoal">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="px-4 py-3 space-y-4">
+                <a href="../index.html" class="block text-steel hover:text-electric-blue transition">Home</a>
+                <a href="products.html" class="block text-charcoal font-medium hover:text-electric-blue transition">Products</a>
+                <a href="about.html" class="block text-steel hover:text-electric-blue transition">About</a>
+                <a href="contact.html" class="block text-steel hover:text-electric-blue transition">Contact Us</a>
+                <a href="contact.html" class="block bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition text-center">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 bg-gradient-to-r from-charcoal to-steel">
+            <div class="absolute inset-0 industrial-pattern opacity-10"></div>
+            <div class="relative z-10 container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 fade-in">
+                    Our Products
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 fade-in max-w-3xl mx-auto">
+                    Discover our comprehensive range of high-precision level measurement and automation solutions designed for demanding industrial environments.
+                </p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="py-16 industrial-pattern">
+            <div class="container mx-auto px-4">
+                <!-- Product 1: Laser Level Transmitters -->
+                <div id="laser" class="mb-20">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="flex flex-col lg:flex-row">
+                            <!-- Product Image -->
+                            <div class="lg:w-1/2 p-8">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1581093450021-33a64e8d2103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                         alt="Laser Level Transmitter" 
+                                         class="w-full h-80 object-cover rounded-lg product-image">
+                                    <div class="absolute top-4 left-4 bg-electric-blue text-white px-3 py-1 rounded-full text-sm font-medium">
+                                        Featured Product
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Description -->
+                            <div class="lg:w-1/2 p-8 flex flex-col justify-center">
+                                <div class="text-electric-blue mb-4">
+                                    <i class="fas fa-bullseye text-4xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold text-charcoal mb-4">Laser Level Transmitters</h2>
+                                <p class="text-steel mb-6 text-lg">
+                                    Non-contact laser sensors with ±2mm accuracy for precise level measurement in challenging industrial environments. Ideal for applications requiring high precision and reliability.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Accuracy</h4>
+                                        <p class="text-steel">±2mm measurement accuracy</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Range</h4>
+                                        <p class="text-steel">Up to 150m measurement range</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Temperature</h4>
+                                        <p class="text-steel">-40°C to +200°C operating</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Protection</h4>
+                                        <p class="text-steel">IP67 protection rating</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a href="#quote" class="bg-electric-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition text-center">
+                                        Request Quote
+                                    </a>
+                                    <a href="#" class="border border-electric-blue text-electric-blue px-6 py-3 rounded-md font-medium hover:bg-electric-blue hover:text-white transition text-center">
+                                        Download Brochure
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Differential-Pressure Transmitters -->
+                <div id="dp" class="mb-20">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="flex flex-col lg:flex-row-reverse">
+                            <!-- Product Image -->
+                            <div class="lg:w-1/2 p-8">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                         alt="Differential-Pressure Transmitter" 
+                                         class="w-full h-80 object-cover rounded-lg product-image">
+                                    <div class="absolute top-4 left-4 bg-electric-blue text-white px-3 py-1 rounded-full text-sm font-medium">
+                                        High Performance
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Description -->
+                            <div class="lg:w-1/2 p-8 flex flex-col justify-center">
+                                <div class="text-electric-blue mb-4">
+                                    <i class="fas fa-tachometer-alt text-4xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold text-charcoal mb-4">Differential-Pressure Transmitters</h2>
+                                <p class="text-steel mb-6 text-lg">
+                                    Rugged DP sensors designed for high-temperature and high-pressure vessel applications. Built to withstand the most demanding industrial conditions.
+                                </p>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Accuracy</h4>
+                                        <p class="text-steel">0.075% reference accuracy</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Pressure</h4>
+                                        <p class="text-steel">Up to 400 bar working pressure</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Protocols</h4>
+                                        <p class="text-steel">HART, PROFIBUS, Foundation Fieldbus</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-4 rounded-lg">
+                                        <h4 class="font-bold text-charcoal mb-2">Temperature</h4>
+                                        <p class="text-steel">-40°C to +85°C ambient</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a href="#quote" class="bg-electric-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition text-center">
+                                        Request Quote
+                                    </a>
+                                    <a href="#" class="border border-electric-blue text-electric-blue px-6 py-3 rounded-md font-medium hover:bg-electric-blue hover:text-white transition text-center">
+                                        Download Brochure
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Automation Services -->
+                <div id="services" class="mb-20">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                        <div class="flex flex-col lg:flex-row">
+                            <!-- Product Image -->
+                            <div class="lg:w-1/2 p-8">
+                                <div class="relative">
+                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                         alt="Automation Services" 
+                                         class="w-full h-80 object-cover rounded-lg product-image">
+                                    <div class="absolute top-4 left-4 bg-electric-blue text-white px-3 py-1 rounded-full text-sm font-medium">
+                                        Professional Services
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Description -->
+                            <div class="lg:w-1/2 p-8 flex flex-col justify-center">
+                                <div class="text-electric-blue mb-4">
+                                    <i class="fas fa-cogs text-4xl"></i>
+                                </div>
+                                <h2 class="text-3xl font-bold text-charcoal mb-4">Automation Services</h2>
+                                <p class="text-steel mb-6 text-lg">
+                                    Comprehensive consulting, integration, installation and support services for industrial automation. From concept to commissioning, we deliver complete solutions.
+                                </p>
+                                
+                                <div class="space-y-4 mb-6">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-electric-blue mt-1 mr-3 text-xl"></i>
+                                        <div>
+                                            <h4 class="font-bold text-charcoal">System Design & Integration</h4>
+                                            <p class="text-steel">Custom automation solutions tailored to your specific requirements</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-electric-blue mt-1 mr-3 text-xl"></i>
+                                        <div>
+                                            <h4 class="font-bold text-charcoal">Installation & Commissioning</h4>
+                                            <p class="text-steel">On-site installation and full system commissioning services</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-check-circle text-electric-blue mt-1 mr-3 text-xl"></i>
+                                        <div>
+                                            <h4 class="font-bold text-charcoal">24/7 Technical Support</h4>
+                                            <p class="text-steel">Round-the-clock support for critical industrial operations</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <a href="#quote" class="bg-electric-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition text-center">
+                                        Get Consultation
+                                    </a>
+                                    <a href="#" class="border border-electric-blue text-electric-blue px-6 py-3 rounded-md font-medium hover:bg-electric-blue hover:text-white transition text-center">
+                                        View Case Studies
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="quote" class="py-16 bg-electric-blue text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Our team of experts is ready to help you find the right solution for your industrial measurement and automation needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-electric-blue px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">
+                        Contact Us Today
+                    </a>
+                    <a href="tel:+442076123456" class="border border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-electric-blue transition inline-block">
+                        Call +44 20 7612 3456
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">About GIAT</h3>
+                    <p class="mb-4">Global Industrial Automation Technologies Ltd delivers precision measurement and automation solutions to industrial clients worldwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-electric-blue hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-electric-blue hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-electric-blue hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#quote" class="hover:text-white transition">Request a Quote</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products.html#laser" class="hover:text-white transition">Laser Level Transmitters</a></li>
+                        <li><a href="products.html#dp" class="hover:text-white transition">DP Transmitters</a></li>
+                        <li><a href="products.html#services" class="hover:text-white transition">Automation Services</a></li>
+                        <li><a href="products.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="#" class="hover:text-white transition">Technical Support</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="mb-2">89 Partington Close</p>
+                        <p class="mb-2">London N19 3DY</p>
+                        <p class="mb-2">United Kingdom</p>
+                        <p class="mb-2"><a href="tel:+442076123456" class="hover:text-white transition">+44 20 7612 3456</a></p>
+                        <p class="mb-2"><a href="mailto:info@giatltd.com" class="hover:text-white transition">info@giatltd.com</a></p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white mb-4 md:mb-0">© GIAT Ltd 2025 – Designed for Precision.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                        <a href="#" class="hover:text-white transition">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add fade-in effect to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0');
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html> 

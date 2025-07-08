@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIAT Ltd - Global Industrial Automation Technologies</title>
     <meta name="description" content="High-precision level measurement & automation solutions for oil, petrochemical, water, pharma, and power industries.">
+    
+    <!-- External Dependencies -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -23,49 +27,9 @@
             }
         }
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .hero-overlay {
-            background: rgba(51, 51, 51, 0.7);
-        }
-        
-        .industrial-pattern {
-            background-image: 
-                linear-gradient(rgba(0, 122, 204, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 122, 204, 0.03) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        
-        .mobile-menu.open {
-            max-height: 500px;
-        }
-    </style>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body class="bg-white text-steel">
     <!-- Header/Navigation -->
@@ -81,13 +45,12 @@
                 <nav>
                     <ul class="flex space-x-8">
                         <li><a href="index.html" class="text-charcoal font-medium hover:text-electric-blue transition">Home</a></li>
-                        <li><a href="products.html" class="text-steel hover:text-electric-blue transition">Products</a></li>
-                        <li><a href="about.html" class="text-steel hover:text-electric-blue transition">About</a></li>
-                        <li><a href="contact.html" class="text-steel hover:text-electric-blue transition">Contact Us</a></li>
+                        <li><a href="pages/products.html" class="text-steel hover:text-electric-blue transition">Products</a></li>
+                        <li><a href="pages/about.html" class="text-steel hover:text-electric-blue transition">About</a></li>
                     </ul>
                 </nav>
-                <a href="#quote" class="bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition">
-                    Request a Quote
+                <a href="pages/contact.html" class="bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition">
+                    Contact Us
                 </a>
             </div>
             
@@ -100,11 +63,10 @@
         <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
             <div class="px-4 py-3 space-y-4">
                 <a href="index.html" class="block text-charcoal font-medium hover:text-electric-blue transition">Home</a>
-                <a href="products.html" class="block text-steel hover:text-electric-blue transition">Products</a>
-                <a href="about.html" class="block text-steel hover:text-electric-blue transition">About</a>
-                <a href="contact.html" class="block text-steel hover:text-electric-blue transition">Contact Us</a>
-                <a href="#quote" class="block bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition text-center">
-                    Request a Quote
+                <a href="pages/products.html" class="block text-steel hover:text-electric-blue transition">Products</a>
+                <a href="pages/about.html" class="block text-steel hover:text-electric-blue transition">About</a>
+                <a href="pages/contact.html" class="block bg-electric-blue text-white px-6 py-2 rounded-md font-medium hover:bg-blue-600 transition text-center">
+                    Contact Us
                 </a>
             </div>
         </div>
@@ -147,11 +109,11 @@
                                 <i class="fas fa-bullseye text-4xl"></i>
                             </div>
                             <h3 class="text-xl font-bold text-charcoal mb-3">Laser Level Transmitters</h3>
-                            <p class="text-steel mb-4">Non-contact laser sensors with ±2 mm accuracy for precise level measurement in challenging industrial environments.</p>
+                            <p class="text-steel mb-4">Non-contact laser sensors with ±2 mm accuracy for precise level measurement in challenging industrial environments.</p>
                             <ul class="space-y-2 mb-6">
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-electric-blue mt-1 mr-2"></i>
-                                    <span>±2 mm measurement accuracy</span>
+                                    <span>±2 mm measurement accuracy</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-electric-blue mt-1 mr-2"></i>
@@ -162,7 +124,7 @@
                                     <span>-40°C to +200°C operating temperature</span>
                                 </li>
                             </ul>
-                            <a href="products.html#laser" class="text-electric-blue font-medium hover:underline inline-flex items-center">
+                            <a href="pages/products.html#laser" class="text-electric-blue font-medium hover:underline inline-flex items-center">
                                 Learn more <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -188,7 +150,7 @@
                                     <span>HART, PROFIBUS, and Foundation Fieldbus protocols</span>
                                 </li>
                             </ul>
-                            <a href="products.html#dp" class="text-electric-blue font-medium hover:underline inline-flex items-center">
+                            <a href="pages/products.html#dp" class="text-electric-blue font-medium hover:underline inline-flex items-center">
                                 Learn more <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -214,7 +176,7 @@
                                     <span>24/7 technical support</span>
                                 </li>
                             </ul>
-                            <a href="products.html#services" class="text-electric-blue font-medium hover:underline inline-flex items-center">
+                            <a href="pages/products.html#services" class="text-electric-blue font-medium hover:underline inline-flex items-center">
                                 Learn more <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -309,7 +271,7 @@
                             <p class="text-steel mb-8">
                                 Headquartered in London with a global network of partners, we combine technical expertise with practical industry knowledge to deliver measurable results for our clients.
                             </p>
-                            <a href="about.html" class="bg-electric-blue text-white px-8 py-3 rounded-md font-medium hover:bg-blue-600 transition inline-block">
+                            <a href="pages/about.html" class="bg-electric-blue text-white px-8 py-3 rounded-md font-medium hover:bg-blue-600 transition inline-block">
                                 Learn More About Us
                             </a>
                         </div>
@@ -329,7 +291,7 @@
                     <p class="text-xl mb-8 max-w-2xl mx-auto">
                         Our team of experts is ready to help you find the right solution for your industrial measurement and automation needs.
                     </p>
-                    <a href="contact.html" class="bg-white text-electric-blue px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">
+                    <a href="pages/contact.html" class="bg-white text-electric-blue px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition inline-block">
                         Contact Us Today
                     </a>
                 </div>
@@ -363,10 +325,10 @@
                     <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
-                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="#quote" class="hover:text-white transition">Request a Quote</a></li>
+                        <li><a href="pages/products.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="pages/about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="pages/contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="pages/contact.html" class="hover:text-white transition">Request a Quote</a></li>
                     </ul>
                 </div>
                 
@@ -374,10 +336,10 @@
                 <div>
                     <h3 class="text-white text-lg font-bold mb-4">Products</h3>
                     <ul class="space-y-2">
-                        <li><a href="products.html#laser" class="hover:text-white transition">Laser Level Transmitters</a></li>
-                        <li><a href="products.html#dp" class="hover:text-white transition">DP Transmitters</a></li>
-                        <li><a href="products.html#services" class="hover:text-white transition">Automation Services</a></li>
-                        <li><a href="products.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="pages/products.html#laser" class="hover:text-white transition">Laser Level Transmitters</a></li>
+                        <li><a href="pages/products.html#dp" class="hover:text-white transition">DP Transmitters</a></li>
+                        <li><a href="pages/products.html#services" class="hover:text-white transition">Automation Services</a></li>
+                        <li><a href="pages/products.html" class="hover:text-white transition">All Products</a></li>
                         <li><a href="#" class="hover:text-white transition">Technical Support</a></li>
                     </ul>
                 </div>
@@ -408,56 +370,7 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const mobileLinks = document.querySelectorAll('#mobile-menu a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add fade-in effect to elements when they come into view
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        fadeElements.forEach(element => {
-            element.classList.add('opacity-0');
-            fadeInObserver.observe(element);
-        });
-    </script>
-<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=QuantumXena/giat2" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
-</html>
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
