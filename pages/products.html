@@ -7,6 +7,7 @@
     <meta name="description" content="Explore our range of high-precision level measurement and automation products for industrial applications.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <script>
         tailwind.config = {
             theme: {
@@ -145,21 +146,21 @@
                                         <div class="carousel-track flex transition-transform duration-300 ease-in-out" id="laser-carousel">
                                             <!-- Carousel Slide 1 -->
                                             <div class="carousel-slide w-full flex-shrink-0">
-                                                <img src="https://images.unsplash.com/photo-1581093450021-33a64e8d2103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                                <img src="../assets/images/1.jpg" 
                                                      alt="Laser Level Transmitter - Front View" 
-                                                     class="w-full h-80 object-cover">
+                                                     class="w-full h-auto max-h-80 object-contain">
                                             </div>
                                             <!-- Carousel Slide 2 -->
                                             <div class="carousel-slide w-full flex-shrink-0">
-                                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                                <img src="../assets/images/2.jpg" 
                                                      alt="Laser Level Transmitter - Side View" 
-                                                     class="w-full h-80 object-cover">
+                                                     class="w-full h-auto max-h-80 object-contain">
                                             </div>
                                             <!-- Carousel Slide 3 -->
                                             <div class="carousel-slide w-full flex-shrink-0">
-                                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                                <img src="../assets/images/3.jpg" 
                                                      alt="Laser Level Transmitter - Installation" 
-                                                     class="w-full h-80 object-cover">
+                                                     class="w-full h-auto max-h-80 object-contain">
                                             </div>
                                         </div>
                                         
@@ -238,21 +239,21 @@
                                         <div class="carousel-track flex transition-transform duration-300 ease-in-out" id="dp-carousel">
                                             <!-- Carousel Slide 1 -->
                                             <div class="carousel-slide w-full flex-shrink-0">
-                                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                                <img src="../assets/images/4.jpg" 
                                                      alt="Differential-Pressure Transmitter - Front View" 
-                                                     class="w-full h-80 object-cover">
+                                                     class="w-full h-auto max-h-80 object-contain">
                                             </div>
                                             <!-- Carousel Slide 2 -->
                                             <div class="carousel-slide w-full flex-shrink-0">
-                                                <img src="https://images.unsplash.com/photo-1581093450021-33a64e8d2103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                                <img src="../assets/images/5.jpg" 
                                                      alt="Differential-Pressure Transmitter - Side View" 
-                                                     class="w-full h-80 object-cover">
+                                                     class="w-full h-auto max-h-80 object-contain">
                                             </div>
                                             <!-- Carousel Slide 3 -->
                                             <div class="carousel-slide w-full flex-shrink-0">
-                                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                                <img src="../assets/images/6.jpg" 
                                                      alt="Differential-Pressure Transmitter - Installation" 
-                                                     class="w-full h-80 object-cover">
+                                                     class="w-full h-auto max-h-80 object-contain">
                                             </div>
                                         </div>
                                         
@@ -327,9 +328,9 @@
                             <!-- Product Image -->
                             <div class="lg:w-1/2 p-8">
                                 <div class="relative">
-                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                    <img src="../assets/images/7.jpg" 
                                          alt="Automation Services" 
-                                         class="w-full h-80 object-cover rounded-lg product-image">
+                                         class="w-full h-auto max-h-80 object-contain rounded-lg product-image">
                                     <div class="absolute top-4 left-4 bg-electric-blue text-white px-3 py-1 rounded-full text-sm font-medium">
                                         Professional Services
                                     </div>
@@ -524,6 +525,86 @@
         fadeElements.forEach(element => {
             element.classList.add('opacity-0');
             fadeInObserver.observe(element);
+        });
+        
+        // ===== CAROUSEL FUNCTIONALITY =====
+        // Global carousel state
+        const carouselStates = {};
+
+        function initializeCarousels() {
+            const carousels = document.querySelectorAll('.carousel-track');
+            
+            carousels.forEach(carousel => {
+                const carouselId = carousel.id;
+                carouselStates[carouselId] = {
+                    currentSlide: 0,
+                    totalSlides: carousel.children.length
+                };
+                
+                // Initialize dots
+                updateCarouselDots(carouselId);
+            });
+        }
+
+        function changeSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel || !carouselStates[carouselId]) return;
+            
+            const state = carouselStates[carouselId];
+            let newSlide = state.currentSlide + direction;
+            
+            // Handle wrap-around
+            if (newSlide < 0) {
+                newSlide = state.totalSlides - 1;
+            } else if (newSlide >= state.totalSlides) {
+                newSlide = 0;
+            }
+            
+            goToSlide(carouselId, newSlide);
+        }
+
+        function goToSlide(carouselId, slideIndex) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel || !carouselStates[carouselId]) return;
+            
+            const state = carouselStates[carouselId];
+            if (slideIndex < 0 || slideIndex >= state.totalSlides) return;
+            
+            // Update current slide
+            state.currentSlide = slideIndex;
+            
+            // Move carousel track
+            const translateX = -slideIndex * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            updateCarouselDots(carouselId);
+        }
+
+        function updateCarouselDots(carouselId) {
+            const state = carouselStates[carouselId];
+            if (!state) return;
+            
+            const carousel = document.getElementById(carouselId);
+            const dotsContainer = carousel.parentElement.querySelector('.carousel-dots');
+            
+            if (dotsContainer) {
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, index) => {
+                    if (index === state.currentSlide) {
+                        dot.classList.add('bg-opacity-100');
+                        dot.classList.remove('bg-opacity-50');
+                    } else {
+                        dot.classList.remove('bg-opacity-100');
+                        dot.classList.add('bg-opacity-50');
+                    }
+                });
+            }
+        }
+        
+        // Initialize carousels when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCarousels();
         });
     </script>
 </body>
