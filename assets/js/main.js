@@ -185,12 +185,100 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeFadeInAnimations();
     initializeContactForm();
     initializeFormFocusEffects();
+    initializeCarousels();
     
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
     
     console.log('GIAT Website - All functionality initialized');
 });
+
+// ===== CAROUSEL FUNCTIONALITY =====
+// Global carousel state
+const carouselStates = {};
+
+function initializeCarousels() {
+    const carousels = document.querySelectorAll('.carousel-track');
+    
+    carousels.forEach(carousel => {
+        const carouselId = carousel.id;
+        carouselStates[carouselId] = {
+            currentSlide: 0,
+            totalSlides: carousel.children.length
+        };
+        
+        // Initialize dots
+        updateCarouselDots(carouselId);
+    });
+}
+
+function changeSlide(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel || !carouselStates[carouselId]) return;
+    
+    const state = carouselStates[carouselId];
+    let newSlide = state.currentSlide + direction;
+    
+    // Handle wrap-around
+    if (newSlide < 0) {
+        newSlide = state.totalSlides - 1;
+    } else if (newSlide >= state.totalSlides) {
+        newSlide = 0;
+    }
+    
+    goToSlide(carouselId, newSlide);
+}
+
+function goToSlide(carouselId, slideIndex) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel || !carouselStates[carouselId]) return;
+    
+    const state = carouselStates[carouselId];
+    if (slideIndex < 0 || slideIndex >= state.totalSlides) return;
+    
+    // Update current slide
+    state.currentSlide = slideIndex;
+    
+    // Move carousel track
+    const translateX = -slideIndex * 100;
+    carousel.style.transform = `translateX(${translateX}%)`;
+    
+    // Update dots
+    updateCarouselDots(carouselId);
+}
+
+function updateCarouselDots(carouselId) {
+    const state = carouselStates[carouselId];
+    if (!state) return;
+    
+    const carousel = document.getElementById(carouselId);
+    const dotsContainer = carousel.parentElement.querySelector('.carousel-dots');
+    
+    if (dotsContainer) {
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+            if (index === state.currentSlide) {
+                dot.classList.add('bg-opacity-100');
+                dot.classList.remove('bg-opacity-50');
+            } else {
+                dot.classList.remove('bg-opacity-100');
+                dot.classList.add('bg-opacity-50');
+            }
+        });
+    }
+}
+
+// Auto-advance carousels (optional)
+function startCarouselAutoAdvance() {
+    setInterval(() => {
+        Object.keys(carouselStates).forEach(carouselId => {
+            const state = carouselStates[carouselId];
+            if (state) {
+                changeSlide(carouselId, 1);
+            }
+        });
+    }, 5000); // Change slide every 5 seconds
+}
 
 // ===== EXPORT FOR MODULE USE (if needed) =====
 if (typeof module !== 'undefined' && module.exports) {
