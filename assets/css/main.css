@@ -124,9 +124,7 @@ body {
 
 /* ===== RESPONSIVE UTILITIES ===== */
 @media (max-width: 768px) {
-    .mobile-menu {
-        max-height: 500px;
-    }
+    /* Mobile menu max-height is handled by .mobile-menu.open class */
 }
 
 /* ===== PRINT STYLES ===== */
