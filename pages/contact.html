@@ -7,6 +7,8 @@
     <meta name="description" content="Get in touch with GIAT Ltd for industrial automation solutions, technical support, or to request a quote.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Maps API -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYw4WPapwn9SxtOgd9I23Meym1LTM423g&callback=console.debug&libraries=maps,marker&v=beta"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -95,6 +97,12 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        
+        /* Google Maps Styles */
+        gmp-map {
+            height: 100%;
+            border-radius: 0.5rem;
         }
     </style>
 </head>
@@ -398,15 +406,16 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-charcoal text-center mb-12">Find Us</h2>
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                        <!-- Placeholder for Google Maps embed -->
-                        <div class="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-map text-4xl text-gray-400 mb-4"></i>
-                                <p class="text-gray-500">Interactive map will be embedded here</p>
-                                <p class="text-sm text-gray-400 mt-2">89 Partington Close, London N19 3DY, UK</p>
-                            </div>
-                        </div>
+                    <div class="h-96 rounded-lg overflow-hidden">
+                        <gmp-map center="51.569862365722656,-0.1282579004764557" zoom="14" map-id="DEMO_MAP_ID">
+                            <gmp-advanced-marker position="51.569862365722656,-0.1282579004764557" title="GIAT Ltd - London Office"></gmp-advanced-marker>
+                        </gmp-map>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-steel text-sm">
+                            <i class="fas fa-map-marker-alt text-electric-blue mr-2"></i>
+                            89 Partington Close, London N19 3DY, United Kingdom
+                        </p>
                     </div>
                 </div>
             </div>
