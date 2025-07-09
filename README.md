@@ -9,16 +9,15 @@ GIAT/
 │   │   └── main.css          # Main stylesheet with all shared styles
 │   ├── 📁 js/                # JavaScript files
 │   │   └── main.js           # Main JavaScript with shared functionality
-│   └── 📁 images/            # Image assets (placeholder)
+│   └── 📁 images/            # Product images (1.jpg - 12.jpg)
 ├── 📁 components/            # Reusable HTML components
 │   ├── header.html           # Navigation header component
 │   ├── footer.html           # Footer component
 │   └── base-template.html    # Base HTML template
 ├── 📁 pages/                 # Individual page files
-│   ├── index.html            # Homepage (moved to root)
-│   ├── products.html         # Products page
+│   ├── products.html         # Products page with carousel functionality
 │   ├── about.html            # About page
-│   └── contact.html          # Contact page
+│   └── contact.html          # Contact page with form validation
 ├── 📄 index.html             # Main homepage (root entry point)
 ├── 📄 package.json           # Project configuration
 ├── 📄 README.md              # Project documentation
@@ -32,6 +31,7 @@ GIAT/
   - Base styles and typography
   - Layout components (hero, industrial pattern)
   - Interactive elements (hover effects, animations)
+  - Carousel styles and navigation
   - Form styles and validation
   - Utility classes
   - Responsive breakpoints
@@ -42,6 +42,7 @@ GIAT/
   - Smooth scrolling implementation
   - Fade-in animations
   - Form validation and handling
+  - Carousel functionality for product images
   - Utility functions (debounce, throttle)
   - Event delegation patterns
 
@@ -62,7 +63,7 @@ GIAT/
 - **Tailwind CSS**: Utility-first CSS framework via CDN
 - **Font Awesome**: Icon library (v6.4.0)
 - **Google Fonts**: Montserrat font family
-- **Unsplash**: High-quality stock images
+- **Local Images**: Product images stored in assets/images/
 
 ## 🚀 Development Workflow
 
@@ -114,12 +115,13 @@ npm run serve
 - **Buttons**: Consistent styling and states
 - **Forms**: Validation and focus states
 - **Navigation**: Sticky header with mobile menu
+- **Carousels**: Product image galleries with navigation
 
 ## ⚡ Performance Optimizations
 
 ### **Loading Strategy**
 - CDN resources for faster loading
-- Optimized images from Unsplash
+- Local product images for better performance
 - Minimal custom CSS (centralized)
 - Efficient JavaScript with event delegation
 
@@ -133,7 +135,7 @@ npm run serve
 ### **Adding New Pages**
 1. Create HTML file in `pages/` directory
 2. Update navigation links in header/footer components
-3. Ensure proper relative paths for assets
+3. Ensure proper relative paths for assets (`../assets/` from pages)
 4. Test responsive behavior
 
 ### **Styling Updates**
@@ -150,11 +152,12 @@ npm run serve
 
 ## 📊 File Statistics
 
-- **Total Files**: 12 files
+- **Total Files**: 15+ files
 - **CSS**: 1 main stylesheet (centralized)
 - **JavaScript**: 1 main file (modular)
 - **HTML Pages**: 4 pages + components
 - **Components**: 3 reusable components
+- **Images**: 12 product images (1.jpg - 12.jpg)
 
 ## 🚀 Deployment
 
@@ -193,6 +196,8 @@ npm run serve
 ## 📈 Future Enhancements
 
 ### **Planned Improvements**
+- [x] Product image carousels implemented
+- [x] Local image assets added
 - [ ] Image optimization and compression
 - [ ] Service Worker for offline support
 - [ ] Advanced form handling with backend
