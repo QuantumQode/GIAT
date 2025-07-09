@@ -441,74 +441,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-charcoal text-gray-300 py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- About -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">About GIAT</h3>
-                    <p class="mb-4">Global Industrial Automation Technologies Ltd delivers precision measurement and automation solutions to industrial clients worldwide.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-electric-blue hover:text-white transition">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="#" class="text-electric-blue hover:text-white transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-electric-blue hover:text-white transition">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
-                        <li><a href="products.html" class="hover:text-white transition">Products</a></li>
-                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Products -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Products</h3>
-                    <ul class="space-y-2">
-                        <li><a href="products.html#laser" class="hover:text-white transition">Laser Level Transmitters</a></li>
-                        <li><a href="products.html#dp" class="hover:text-white transition">DP Transmitters</a></li>
-                        <li><a href="products.html#services" class="hover:text-white transition">Automation Services</a></li>
-                        <li><a href="products.html" class="hover:text-white transition">All Products</a></li>
-                        <li><a href="#" class="hover:text-white transition">Technical Support</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact -->
-                <div>
-                    <h3 class="text-white text-lg font-bold mb-4">Contact Us</h3>
-                    <address class="not-italic">
-                        <p class="mb-2">89 Partington Close</p>
-                        <p class="mb-2">London N19 3DY</p>
-                        <p class="mb-2">United Kingdom</p>
-                        <p class="mb-2"><a href="tel:+442076123456" class="hover:text-white transition">+44 20 7612 3456</a></p>
-                        <p class="mb-2"><a href="mailto:info@giatltd.com" class="hover:text-white transition">info@giatltd.com</a></p>
-                    </address>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-white mb-4 md:mb-0">© GIAT Ltd 2025 – Designed for Precision.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                        <a href="#" class="hover:text-white transition">Terms of Service</a>
-                        <a href="#" class="hover:text-white transition">Sitemap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script>
         // Mobile menu toggle
@@ -640,6 +573,26 @@
         document.addEventListener('DOMContentLoaded', function() {
             initializeCarousels();
         });
+        
+        // Load footer component
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+                
+                // Update footer links for pages directory
+                const footer = document.getElementById('footer-placeholder');
+                footer.querySelector('[href="data-home-link"]').href = '../index.html';
+                footer.querySelector('[href="data-products-link"]').href = 'products.html';
+                footer.querySelector('[href="data-about-link"]').href = 'about.html';
+                footer.querySelector('[href="data-contact-link"]').href = 'contact.html';
+                footer.querySelector('[href="data-laser-link"]').href = 'products.html#laser';
+                footer.querySelector('[href="data-dp-link"]').href = 'products.html#dp';
+                footer.querySelector('[href="data-services-link"]').href = 'products.html#services';
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
     </script>
 </body>
 </html> 
